@@ -1,0 +1,30 @@
+# Ruff configuration
+
+target-version = "py311"
+line-length = 100
+
+exclude = [
+    ".venv",
+    "build",
+    "dist",
+    "__pycache__",
+    ".mypy_cache",
+    ".ruff_cache",
+    ".git",
+    ".tox",
+]
+
+[lint]
+select = ["E", "F", "B", "I", "UP", "C90", "SIM"]
+ignore = ["E501", "B008"]  # Line too long & function call as default arg
+
+[lint.isort]
+known-first-party = ["src"]
+combine-as-imports = true
+force-single-line = false
+
+[format]
+quote-style = "double"
+skip-magic-trailing-comma = false
+indent-style = "space"
+line-ending = "lf"

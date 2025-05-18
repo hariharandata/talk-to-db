@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg
+*.egg-info/
+dist/
+build/
+*.log
+
+# Docker
+*.tar
+*.bak
+docker-compose.override.yml
+
+# VSCode
+.vscode/
+
+# System
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+*.env
+
+# PyProject/Poetry
+poetry.lock
+
+# Test/coverage reports
+htmlcov/
+.tox/
+.coverage
+.cache/
+pytest_cache/
+
+# Others
+*.sqlite3
+*.db
+
+# If using Jupyter notebooks
+.ipynb_checkpoints/
+
+# MacOS specific
+.DS_Store
+
+# Ignore Pipfile stuff if used
+Pipfile.lock

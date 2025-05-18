@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "talk-to-db"
+version = "0.1.0"
+description = "This project helps the non tech people to extract the queries from the DB"
+authors = ["Hariharan Gopinath"]
+packages = [
+    { include = "src" }
+]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<4.0"
+pytest = "^8.3.4"
+ruff = "^0.4.4" # Using a recent version of Ruff
+psycopg2-binary = "^2.9.10"
+openai = "^1.56.0"
+python-dotenv = "^1.0.0"
+fastapi = "^0.110.0"
+uvicorn = "^0.29.0"
+sqlalchemy = "^2.0.29"
+pydantic = "^2.7.1"
+
+
+
+[tool.ruff]
+line-length = 100
+select = ["E", "F", "W", "I"] # Example rule sets
+# Add other configurations as needed

@@ -1,0 +1,44 @@
+name: Lint Codebase
+
+on:
+  push:
+    branches:
+      - main
+      - develop # Or any other branches you want to trigger on
+  pull_request:
+    branches:
+      - main
+      - develop # Or any other branches you want to target
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10' # Specify your desired Python version
+
+      - name: Install Poetry
+        run: pipx install poetry
+
+      - name: Install dependencies
+        run: poetry install
+
+      - name: Run Ruff Linter
+        run: poetry run ruff check . --fix
+
+      # Optional: Add ruff format check if you want to enforce formatting
+      - name: Run Ruff Formatter Check
+        run: poetry run ruff format --check .
+
+      # - name: Run Pylint
+      #   # Adjust the path if your source code is not in the root or a standard src directory
+      #   # You can also create a .pylintrc file to configure Pylint's behavior
+      #   run: poetry run pylint $(git ls-files '*.py')
+
+      - name: Run the pytest
+        run: poetry run pytest
