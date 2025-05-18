@@ -4,6 +4,10 @@
 
 Talk to DB is an innovative AI-powered database query assistant that helps non-technical people extract queries from databases effortlessly. By leveraging natural language processing, users can interact with databases using plain English.
 
+I have developed this application in an AI Hackathon within 30 minutes and later, added more features to it.
+
+The main motiviation to develop this to make it easier for non-technical people to extract queries from databases effortlessly. Further, i see this problem in my day to day work and i think this can be a game changer for non-technical people to extract queries from databases effortlessly.
+
 ## 🌟 Key Features
 
 - **Natural Language to SQL**: Convert everyday language into precise SQL queries
